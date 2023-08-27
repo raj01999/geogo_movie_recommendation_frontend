@@ -9,7 +9,7 @@ import Genres from "../../utils/genres";
 import { motion, AnimatePresence } from "framer-motion";
 import { useDispatch } from "react-redux";
 import { addMovie } from "../../actions/movies";
-import { setFilterSelections } from "../../actions/filter";
+import { setFilterSelections, setSearchKey } from "../../actions/filter";
 
 const Home = () => {
   const { searchKey, filterSelections } = useSelector((state) => state.filter);
@@ -26,6 +26,7 @@ const Home = () => {
 
   useEffect(() => {
     dispatch(setFilterSelections(Genres.map(() => false)));
+    dispatch(setSearchKey(""));
   }, []);
 
   useUpdateEffect(() => {
