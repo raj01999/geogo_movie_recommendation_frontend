@@ -1,0 +1,23 @@
+@media (max-width: 600px) {
+  .movie__list {
+    padding: 0 0.4rem 0.4rem 0.4rem;
+  }
+}
+
+@media (min-width: 600px) {
+  .movie__list {
+    padding: 0 1rem 1rem 1rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .movie__list {
+    padding: 0 3rem 3rem 3rem;
+  }
+}
+
+.list__cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}

@@ -1,0 +1,58 @@
+@media (max-width: 600px) {
+  .header {
+    margin: 0 0.4rem 0 4.4rem;
+  }
+}
+
+@media (min-width: 600px) {
+  .header {
+    margin: 0 1rem 0 4rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .header {
+    margin: 0 3rem 0 6rem;
+  }
+}
+
+.header {
+  padding: 0.5rem 0;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.headerLeft,
+.headerRight {
+  display: flex;
+  align-items: center;
+  margin-top: 6px;
+}
+
+.header__icon {
+  width: 120px;
+  cursor: pointer;
+}
+
+.search__movie {
+  width: 300px;
+  height: 35px;
+  border-radius: 7px;
+  border: none;
+  outline: none;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.header__link > span {
+  margin: 0 5px;
+  font-size: 1.3rem;
+  cursor: pointer;
+  color: white;
+}
+
+.header__link > span:hover {
+  color: red;
+}
