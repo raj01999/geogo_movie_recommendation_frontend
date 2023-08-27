@@ -44,8 +44,8 @@ const MoviesList = ({ pageTitle }) => {
           ) : (
             <div style={{ fontSize: "1.5rem" }}>
               {pageTitle == "Liked Movies"
-                ? "Liked Some Movie First"
-                : "Add some Move to watch later"}
+                ? "You have not liked any movie yet, Your liked movie will appear here"
+                : "You have not added any movie yet, Your saved movie will appear here"}
             </div>
           )}
         </AnimatePresence>
