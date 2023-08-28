@@ -1,19 +1,26 @@
-import React, { useCallback, useMemo, useState } from "react";
+import React, { useCallback, useMemo, useState, useEffect } from "react";
 import "./header.css";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import geogo__logo from "../../utils/images/geogo-logo.png";
 import avatar__user from "../../utils/images/avatar.png";
 import Drawer from "../drawer/Drawer";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { setSearchKey } from "../../actions/filter";
 import debounce from "lodash.debounce";
 import { setFilterSelections } from "../../actions/filter";
 import Genres from "../../utils/genres";
 
 const Header = () => {
+  const { searchKey, _ } = useSelector((state) => state.filter);
   const [sKey, setSKey] = useState("");
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    if (searchKey.length == 0) {
+      setSKey("");
+    }
+  }, [searchKey]);
 
   /**
    * Debouncing for less api call on search key word
